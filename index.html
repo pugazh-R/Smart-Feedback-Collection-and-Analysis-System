@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Feedback System</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/4adad1b8d6.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="logo">Feedback<span>AI</span></div>
+
+    <nav>
+        <ul>
+            <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+            <li><i class="fas fa-comment-dots"></i> Feedback</li>
+            <li><i class="fas fa-chart-line"></i> Analytics</li>
+            <li><i class="fas fa-cog"></i> Settings</li>
+        </ul>
+    </nav>
+</aside>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+        <h1>Smart Feedback Dashboard</h1>
+        <div class="user">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </header>
+
+    <!-- DASHBOARD CONTENT -->
+    <div class="dashboard">
+
+        <!-- FORM CARD -->
+        <div class="card form-card">
+            <h2>Submit Feedback</h2>
+            <p class="sub-text">Your feedback helps us improve our system.</p>
+
+            <form id="form">
+                <div class="input-group">
+                    <textarea id="msg" placeholder="Write your feedback here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn">
+                    <i class="fas fa-paper-plane"></i> Submit
+                </button>
+            </form>
+
+            <div class="result-box">
+                <h3 id="result"></h3>
+            </div>
+        </div>
+
+        <!-- ANALYTICS CARD -->
+        <div class="card chart-card">
+            <h2>Sentiment Analytics</h2>
+            <canvas id="chart"></canvas>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
